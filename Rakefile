@@ -1,21 +1,26 @@
-require 'rubygems/package_task'
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-GEM_NAME = 'chef-info'
+require 'rubygems/package_task'
+require 'knife/version'
+
+GEM_NAME = 'knife-info'
+GEM_VERSION = Chef::Knife::Info::VERSION
 
 task :default => :gem
 task :clean => :clobber_package
 
-spec = eval(File.read('chef-info.gemspec'))
+spec = eval(File.read('knife-info.gemspec'))
 Gem::PackageTask.new(spec) do |pkg|
   pkg.gem_spec = spec
 end
 
-desc 'install chef-info'
+desc 'install gem'
 task :install => :package do
-  sh %{gem install pkg/#{GEM_NAME}-#{Chef::Info::VERSION}.gem --no-rdoc --no-ri}
+  sh %{gem install pkg/#{GEM_NAME}-#{GEM_VERSION}.gem --no-rdoc --no-ri}
 end
 
-desc 'uninstall chef-info'
+desc 'uninstall gem'
 task :uninstall do
-  sh %{gem uninstall #{GEM_NAME} -x -v #{Chef::Info::VERSION} }
+  sh %{gem uninstall #{GEM_NAME} -x -v #{GEM_VERSION} }
 end

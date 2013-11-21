@@ -5,6 +5,6 @@ Signal.trap("INT") { exit 1 }
 
 $:.unshift File.join(File.dirname(__FILE__), %w{.. lib})
 require 'rubygems'
-require 'chef_info'
+require 'knife/info'
 
-Chef::Info.print
+Chef::Knife::Info.print
