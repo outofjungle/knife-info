@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# -*- encoding: utf-8 -*-
+
+Signal.trap("INT") { exit 1 }
+
+$:.unshift File.join(File.dirname(__FILE__), %w{.. lib})
+require 'rubygems'
+require 'chef_info'
+
+Chef::Info.print
