@@ -7,4 +7,4 @@ $:.unshift File.join(File.dirname(__FILE__), %w{.. lib})
 require 'rubygems'
 require 'knife/info'
 
-Chef::Knife::Info.print
+Chef::Knife::Info.info
