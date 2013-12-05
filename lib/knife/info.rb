@@ -25,7 +25,11 @@ class Chef
       end
 
       def pretty_print
-        puts @user + '@' + @host + '/' + @organization
+        puts "#{user_string}#{@host}/#{@organization}"
+      end
+
+      def user_string
+        (@user != ENV['USER']) ? "#{@user}@" : ''
       end
 
       attr_reader :host, :organization, :user, :config_file_location
