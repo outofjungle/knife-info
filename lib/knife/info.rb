@@ -4,13 +4,11 @@ require 'uri'
 class Chef
   class Knife
     class Info < Knife
-
       def self.info
         knife_info = Chef::Knife::Info.new
         knife_info.pretty_print
       end
 
-      attr_reader :host, :organization, :user, :config_file_location
       def initialize(argv=[])
         super()
         configure_chef
@@ -29,6 +27,8 @@ class Chef
       def pretty_print
         puts @user + '@' + @host + '/' + @organization
       end
+
+      attr_reader :host, :organization, :user, :config_file_location
     end
   end
 end
