@@ -1,5 +1,7 @@
 # knife Info
 
+[![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info)
+
 ## Description
 
 This is an EXPERIMENTAL knife plugin that displays the information from the `knife.rb` config file in the kinfe search path.
