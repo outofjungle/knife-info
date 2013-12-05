@@ -2,12 +2,11 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'rubygems/package_task'
-require 'knife/version'
+require 'knife-info/version'
 
 GEM_NAME = 'knife-info'
-GEM_VERSION = Chef::Knife::Info::VERSION
+GEM_VERSION = KnifeInfo::VERSION
 
-task :default => :gem
 task :clean => :clobber_package
 
 spec = eval(File.read('knife-info.gemspec'))
@@ -23,4 +22,18 @@ end
 desc 'uninstall gem'
 task :uninstall do
   sh %{gem uninstall #{GEM_NAME} -x -v #{GEM_VERSION} }
+end
+
+begin
+  require 'rspec/core/rake_task'
+
+  task :default => :spec
+
+  desc 'Run all specs in spec directory'
+  RSpec::Core::RakeTask.new(:spec) do |t|
+    t.pattern = 'spec/unit/**/*_spec.rb'
+  end
+
+rescue LoadError
+  STDERR.puts "\n*** RSpec not available. (sudo) gem install rspec to run unit tests. ***\n\n"
 end
