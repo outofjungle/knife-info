@@ -23,4 +23,4 @@ git repository and run the following:
 
 ## TODO
 
-* `--color` option
+* Support for `--[no-]color` option

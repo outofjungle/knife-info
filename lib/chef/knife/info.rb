@@ -9,18 +9,18 @@ module KnifeInfo
 
     option :tiny,
            :long => '--tiny',
-           :description => 'print concise info in oneline',
+           :description => 'Print concise information in oneline',
            :boolean => true | false,
            :default => true
 
     option :medium,
            :long => '--medium',
-           :description => 'print info in oneline',
+           :description => 'Print important information in oneline',
            :boolean => true | false
 
     option :long,
            :long => '--long',
-           :description => 'print info in multi line',
+           :description => 'Print all information in multiple lines',
            :boolean => true | false
 
     def run
