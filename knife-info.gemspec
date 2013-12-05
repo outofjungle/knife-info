@@ -1,5 +1,4 @@
-$:.unshift(File.dirname(__FILE__) + '/lib')
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$:.push File.expand_path("../lib", __FILE__)
 require 'knife-info/version'
 
 Gem::Specification.new do |spec|
