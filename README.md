@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an EXPERIMENTAL knife plugin that displays the information from the `knife.rb` config file in the **kinfe search path**.
+This is an EXPERIMENTAL knife plugin that displays the information from the `knife.rb` config file in the kinfe search path.
 
 ## Installation
 
