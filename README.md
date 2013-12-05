@@ -1,6 +1,4 @@
-# knife Info
-
-[![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info)
+# knife Info [![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info)
 
 ## Description
 
