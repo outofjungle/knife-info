@@ -1,13 +1,13 @@
-# knife Info [![Gem Version](https://badge.fury.io/rb/test-kitchen.png)](http://badge.fury.io/rb/test-kitchen) [![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info) [![Code Climate](https://codeclimate.com/github/outofjungle/knife-info.png)](https://codeclimate.com/github/outofjungle/knife-info) [![Dependency Status](https://gemnasium.com/outofjungle/knife-info.png)](https://gemnasium.com/outofjungle/knife-info)
+# knife Info [![Gem Version](https://badge.fury.io/rb/knife-info.png)](http://badge.fury.io/rb/knife-info) [![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info) [![Code Climate](https://codeclimate.com/github/outofjungle/knife-info.png)](https://codeclimate.com/github/outofjungle/knife-info) [![Dependency Status](https://gemnasium.com/outofjungle/knife-info.png)](https://gemnasium.com/outofjungle/knife-info)
 
 ## Description
 
-This is an EXPERIMENTAL knife plugin that displays the information from the `knife.rb` config file in the kinfe search path.
+This is an EXPERIMENTAL knife plugin that displays information from `knife.rb` config file in knife's configuration file search path.
 
 ## Installation
 
-This knife plugin is packaged as a gem.  To install it, clone the
-git repository and run the following:
+This knife plugin is packaged as a gem. To install it, clone this
+git repository and run the following command:
 
     rake install
 
