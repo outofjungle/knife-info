@@ -24,21 +24,25 @@ module KnifeInfo
            :boolean => true | false
 
     def run
-      @config_file_location = Chef::Knife.locate_config_file
+      read_config_data
+
+      unless @config_file.nil?
+        case
+        when config[:long] then ui.msg(long_print)
+        when config[:medium] then ui.msg(medium_print)
+        else ui.msg(tiny_print)
+        end
+      end
+    end
+
+    def read_config_data
+      @config_file = Chef::Knife.locate_config_file
 
       uri = URI(server_url)
       @host = uri.host
 
-      %r(.*/(?<org>.*)$) =~ uri.path
+      %r(.*/organizations/(?<org>.*)$) =~ uri.path
       @organization = org || ''
-
-      if config[:long]
-        ui.msg(long_print)
-      elsif config[:medium]
-        ui.msg(medium_print)
-      else config[:tiny]
-        ui.msg(tiny_print)
-      end
     end
 
     def user_string
@@ -59,7 +63,7 @@ module KnifeInfo
         Host: #{@host}
         Username: #{username}
         Organization: #{@organization}
-        Config File: #{@config_file_location}
+        Config File: #{@config_file}
       VERBOSE
     end
 

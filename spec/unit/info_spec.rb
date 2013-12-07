@@ -22,13 +22,13 @@ describe KnifeInfo::Info do
     "https://#{host}.#{domain}/organizations/#{organization}"
   end
 
-  let(:config_file_location) do
+  let(:config_file) do
     "/home/#{username}/.chef/knife.rb"
   end
 
   before :each do
     @knife = Chef::Knife::Info.new
-    Chef::Knife.stub(:locate_config_file).and_return(config_file_location)
+    Chef::Knife.stub(:locate_config_file).and_return(config_file)
     @knife.stub(:server_url).and_return(url)
     @knife.stub(:username).and_return(username)
   end
@@ -75,10 +75,21 @@ describe KnifeInfo::Info do
       "Host: #{host}.#{domain}",
       "Username: #{username}",
       "Organization: #{organization}",
-      "Config File: #{config_file_location}",
+      "Config File: #{config_file}",
       ""
     ]
     @knife.ui.should_receive(:msg).with(expected.join("\n"))
     @knife.run
+  end
+
+  context 'if config file is not found' do
+    before :each do
+      Chef::Knife.stub(:locate_config_file).and_return(nil)
+    end
+
+    it 'should print nothing' do
+      @knife.ui.should_receive(:msg).exactly(0).times
+      @knife.run
+    end
   end
 end
