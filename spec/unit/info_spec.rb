@@ -10,7 +10,7 @@ describe KnifeInfo::Info do
     'test'
   end
 
-  let('domain') do
+  let(:domain) do
     'chef.org'
   end
 
