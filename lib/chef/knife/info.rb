@@ -10,8 +10,7 @@ module KnifeInfo
     option :tiny,
            :long => '--tiny',
            :description => 'Print concise information in oneline',
-           :boolean => true | false,
-           :default => true
+           :boolean => true | false
 
     option :medium,
            :long => '--medium',
@@ -21,16 +20,17 @@ module KnifeInfo
     option :long,
            :long => '--long',
            :description => 'Print all information in multiple lines',
-           :boolean => true | false
+           :boolean => true | false,
+           :default => true
 
     def run
       read_config_data
 
       unless @config_file.nil?
         case
-        when config[:long] then ui.msg(long_print)
+        when config[:tiny] then ui.msg(tiny_print)
         when config[:medium] then ui.msg(medium_print)
-        else ui.msg(tiny_print)
+        else ui.msg(long_print)
         end
       end
     end
