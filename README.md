@@ -1,4 +1,8 @@
-# knife Info [![Gem Version](https://badge.fury.io/rb/knife-info.png)](http://badge.fury.io/rb/knife-info) [![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info) [![Code Climate](https://codeclimate.com/github/outofjungle/knife-info.png)](https://codeclimate.com/github/outofjungle/knife-info) [![Dependency Status](https://gemnasium.com/outofjungle/knife-info.png)](https://gemnasium.com/outofjungle/knife-info)
+# knife Info 
+[![Gem Version](https://badge.fury.io/rb/knife-info.png)](http://badge.fury.io/rb/knife-info)
+[![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info)
+[![Code Climate](https://codeclimate.com/github/outofjungle/knife-info.png)](https://codeclimate.com/github/outofjungle/knife-info)
+[![Dependency Status](https://gemnasium.com/outofjungle/knife-info.png)](https://gemnasium.com/outofjungle/knife-info)
 
 ## Description
 
