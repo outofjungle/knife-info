@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/outofjungle/knife-info.png?branch=master)](https://travis-ci.org/outofjungle/knife-info)
 [![Code Climate](https://codeclimate.com/github/outofjungle/knife-info.png)](https://codeclimate.com/github/outofjungle/knife-info)
 [![Dependency Status](https://gemnasium.com/outofjungle/knife-info.png)](https://gemnasium.com/outofjungle/knife-info)
+[![Coverage Status](https://coveralls.io/repos/outofjungle/knife-info/badge.png)](https://coveralls.io/r/outofjungle/knife-info)
 
 ## Description
 
